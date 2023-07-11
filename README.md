@@ -1,7 +1,7 @@
 # Supported Games
 
-+ Rate My Avatar
-Features
+Rate My Avatar Features
+
 + Booth Gifs / Decals
 + Teleports to locations
 + Client movement
