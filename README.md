@@ -6,7 +6,7 @@
   
 ---------------
 
-# Rate My Avatar Features
+# Rate My Avatar [V2.0] Features
 ---------------
 + Booth Gifs / Decals
 + Pug dancing GIF
@@ -44,7 +44,7 @@
 ![ratemyavatarbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/4069bb9f-0c84-43cb-a1ce-bdc730ed98af)
 
 
-# Fishing Simulator Features
+# Fishing Simulator [V2.1] Features
 ---------------
 + Farming
 + Auto-Sell
