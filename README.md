@@ -7,17 +7,40 @@
 ---------------
 
 # Rate My Avatar Features
-
+---------------
 + Booth Gifs / Decals
-+ Teleports to locations
++ Pug dancing GIF
++ Cat GIF
++ Skull becomes 1 GIF
++ Skull exploding GIF
++ cabybara pulls up GIF
++ Rat Spinning GIF
++ Cat Dancing GIF
++ Yipeee GIF
+---------------
++ Teleport
++ Spawn
++ Underground Club
++ Item Shop
++ Top Rated Leaderboard
+---------------
 + Client movement
++ Walkspeed
++ Jumppower
++ Infinite Jump
 + Anti-Blacklist
-+ Auto Knight / Can also press a button to not auto do it
-+ Misc
++ Auto-Knight
++ Knight
+---------------
++ Other
 + Enable Chat
 + Anti-Afk
 + Realistic Graphics - Creds to lonelywhale
-
+---------------
++ Server
++ Rejoin
++ Serverhop
+---------------
 ![ratemyavatarbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/4069bb9f-0c84-43cb-a1ce-bdc730ed98af)
 
 
