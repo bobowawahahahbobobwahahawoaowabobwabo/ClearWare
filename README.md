@@ -59,5 +59,4 @@
 ---------------
 ![fishigsimbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/c79aed3a-f921-44d6-b082-cc88f6265c98)
 
-!! More games and features will be added soon !!
-!! If you get an error please send an dm with an screenshot of the error to jailedd on discord !!
+More features soon, if there's an error take an screenshot and send it to jailedd on discord.
