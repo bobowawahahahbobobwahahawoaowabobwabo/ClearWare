@@ -1,5 +1,3 @@
---  If you wish to get an key dm pvhak on discord or jailedd | price: 5-20 robux
+-- This script is free
 
-local key = "" -- Enter Key Here
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/main/Key_System.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/main/Game_Loader.lua"))()
