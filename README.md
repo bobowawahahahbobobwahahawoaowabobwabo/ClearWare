@@ -18,7 +18,8 @@
 + Anti-Afk
 + Realistic Graphics - Creds to lonelywhale
 
-![ratemyavatarbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/6dc09c92-c544-4a0f-a9f5-511815a9073a)
+![ratemyavatarbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/4069bb9f-0c84-43cb-a1ce-bdc730ed98af)
+
 
 # Fishing Simulator Features
 ---------------
