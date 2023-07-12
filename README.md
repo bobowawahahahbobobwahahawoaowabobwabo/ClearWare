@@ -10,7 +10,7 @@
 
 + Rate My Avatar
 + Fishing Simulator
-+ Flex Your Weather (Not Published)
++ Flex Your Weather
 
 ---------------
 
