@@ -6,8 +6,16 @@
   
 ---------------
 
-# Rate My Avatar [V2.0] Features
+# Supporter Games
+
++ Rate My Avatar
++ Fishing Simulator
++ Flex Your Weather
+
 ---------------
+
+# Rate My Avatar [V2.0] Features
+
 + Booth Gifs / Decals
 + Pug dancing GIF
 + Cat GIF
@@ -45,7 +53,7 @@
 
 
 # Fishing Simulator [V2.1] Features
----------------
+
 + Farming
 + Auto-Sell
 + Fish Anywhere
