@@ -92,4 +92,36 @@
 ---------------
 ![fishigsimbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/c79aed3a-f921-44d6-b082-cc88f6265c98)
 
-More features soon, if there's an error take an screenshot and send it to jailedd on discord.
+# Flex Your Weather [Beta] Features
+
++ Time Editing
++ Random Generated Time (Semi-Realistic)
++ Random Generated Time (Non-Realistic)
++ Inf time
++ Hide Time
+---------------
++ Teleport
++ Staff Room
++ Gambling Room
++ Secret Room
++ Books
+---------------
++ Client Movement
++ Walkspeed
++ Jumppower
++ Infinite Jump
++ Always Bloxiade Speedboost
+---------------
++ Other
++ Anti-Afk
++ Instant ProximityPrompt
+---------------
++ Server
++ Delete Doors
++ Rejoin
++ Server Hop
+---------------
+
+![Flex your weatherbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/b44f03e0-227b-4452-84aa-4feac492f777)
+
++ More features soon, if there's an error take an screenshot and send it to jailedd on discord.
