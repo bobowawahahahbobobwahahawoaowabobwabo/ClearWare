@@ -14,7 +14,7 @@
 
 ---------------
 
-# Rate My Avatar [V2.0] Features
+# Rate My Avatar [2.0] Features
 
 + Booth Gifs / Decals
 + Pug dancing GIF
