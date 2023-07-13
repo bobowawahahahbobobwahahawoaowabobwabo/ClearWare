@@ -14,7 +14,7 @@
 
 ---------------
 
-# Rate My Avatar [2.0] Features
+# Rate My Avatar [1.5] Features
 
 + Booth Gifs / Decals
 + Pug dancing GIF
@@ -25,6 +25,16 @@
 + Rat Spinning GIF
 + Cat Dancing GIF
 + Yipeee GIF
+---------------
++ Image Sign
++ Skeleton Running GIF
++ Rock rising his eyebrow GIF
++ Happy monkey circle GIF
++ Spongebob Fish GIF
+---------------
++ Knight
++ Auto-Knight
++ Knight
 ---------------
 + Teleport
 + Spawn
@@ -37,8 +47,6 @@
 + Jumppower
 + Infinite Jump
 + Anti-Blacklist
-+ Auto-Knight
-+ Knight
 ---------------
 + Other
 + Enable Chat
@@ -49,7 +57,7 @@
 + Rejoin
 + Serverhop
 ---------------
-![ratemyavatarbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/4069bb9f-0c84-43cb-a1ce-bdc730ed98af)
+![ratemyavatarbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/Clearware/assets/110189904/5b7c215e-fb85-478c-996d-07e1d2cb8562)
 
 
 # Fishing Simulator [V2.1] Features
