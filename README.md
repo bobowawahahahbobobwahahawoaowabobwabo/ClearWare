@@ -1,5 +1,5 @@
 # Status
-+ Currently Down for maitence
+Currently Down for maitence
   
   Effected Games
 +  Rate My Avatar
