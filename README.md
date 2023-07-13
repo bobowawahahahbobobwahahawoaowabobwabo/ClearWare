@@ -104,7 +104,7 @@
 ---------------
 ![fishigsimbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/c79aed3a-f921-44d6-b082-cc88f6265c98)
 
-# Flex Your Weather [Beta] Features
+# Flex Your Weather [1.5] Features
 
 + Time Editing
 + Random Generated Time (Semi-Realistic)
