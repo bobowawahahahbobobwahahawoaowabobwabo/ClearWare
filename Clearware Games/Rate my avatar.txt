@@ -1,3 +1,4 @@
+-- Hi2
 local Config = {
     WindowName = "< Clearware | Version 1.5 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
