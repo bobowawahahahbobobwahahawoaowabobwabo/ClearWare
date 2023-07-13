@@ -6,7 +6,6 @@
 
 + Electron
 + Fluxus
-+ Comet
   
 ---------------
 
