@@ -34,7 +34,7 @@
 ---------------
 + Knight
 + Auto-Knight
-+ Knight
++ Claim Knight
 ---------------
 + Teleport
 + Spawn
