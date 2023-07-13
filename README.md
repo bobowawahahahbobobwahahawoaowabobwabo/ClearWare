@@ -1,6 +1,5 @@
 # Status
-Currently Down for maitence
-Effected Games
+[Down] | Effected Games
 +  Rate My Avatar
 +  Fishing Simulator
 +  Flex Your Weather
