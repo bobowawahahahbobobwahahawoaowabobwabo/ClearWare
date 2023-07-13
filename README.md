@@ -1,5 +1,5 @@
 # Status
-[ Script is Down ]
+[ Script Should work properly ]
 
 ---------------
 # Supported Executors (Tested on)
