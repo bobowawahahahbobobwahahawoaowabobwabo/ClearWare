@@ -1,6 +1,7 @@
--- Hi3
+-- Clearware example ( !! YAY !! )
+
 local Config = {
-    WindowName = "< Clearware | Version 1.1 >",
+    WindowName = "< Clearware | Version 2.0 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
     Color = Color3.fromRGB(0,47,108),
     Keybind = Enum.KeyCode.Z
@@ -311,7 +312,7 @@ Slider4:SetValue(0.5)
 
 ----------------------- Credits // End of UI
 Section2:CreateLabel("Credits")
-Section2:CreateLabel("Clear/Pvhak: Owner")
+Section2:CreateLabel("Jailedd: Owner")
 Section2:CreateLabel("Lonelywhale: Contribution")
 
 
