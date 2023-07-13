@@ -1,8 +1,5 @@
 # Status
-[ Script is Down ] | [ Effected Games ]
-+  Rate My Avatar
-+  Fishing Simulator
-+  Flex Your Weather
+[ Script is Down ]
 
 ---------------
 # Supported Executors (Tested on)
