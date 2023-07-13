@@ -1,4 +1,5 @@
--- Hi1
+---< this script is NOT done | Fuck you!!! >---
+
 local Config = {
     WindowName = "< Clearware | Version 2.0 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
@@ -455,7 +456,7 @@ Slider4:SetValue(0.5)
 
 ----------------------- Credits // End of UI
 Section2:CreateLabel("Credits")
-Section2:CreateLabel("Clear/Pvhak: Owner")
+Section2:CreateLabel("Jailedd: Owner")
 Section2:CreateLabel("Lonelywhale: Contribution")
 
 
@@ -463,4 +464,3 @@ Toggle7:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), functi
     Config.Keybind = Enum.KeyCode[Key]
 end)    
 Toggle7:SetState(true) 
--- End of script. ! What are you doing here? !
