@@ -1,5 +1,5 @@
 # Status
-[ Script is Down ] | Effected Games
+[ Script is Down ] | [ Effected Games ]
 +  Rate My Avatar
 +  Fishing Simulator
 +  Flex Your Weather
