@@ -132,7 +132,7 @@
 + Rejoin
 + Server Hop
 ---------------
-
+(Outdated screenshot of ui)
 ![Flex your weatherbanner](https://github.com/bobowawahahahbobobwahahawoaowabobwabo/ClearWare/assets/110189904/b44f03e0-227b-4452-84aa-4feac492f777)
 
 + More features soon, if there's an error take an screenshot and send it to jailedd on discord.
