@@ -1,3 +1,12 @@
+# Status
++ Currently Down for maitence
+  
+  Effected Games
++  Rate My Avatar
++  Fishing Simulator
++  Flex Your Weather
+
+---------------
 # Supported Executors (Tested on)
 
 + Electron
