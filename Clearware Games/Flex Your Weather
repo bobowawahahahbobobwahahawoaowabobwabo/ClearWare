@@ -1,5 +1,3 @@
--- Clearware example ( !! YAY !! )
-
 local Config = {
     WindowName = "< Clearware | Version 2.0 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
