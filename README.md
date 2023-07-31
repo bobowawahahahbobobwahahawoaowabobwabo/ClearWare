@@ -14,6 +14,7 @@
 + Rate My Avatar
 + Fishing Simulator
 + Flex Your Weather
++ Kat
 + Natural Survival Disaster (Currently Private)
 ---------------
 
