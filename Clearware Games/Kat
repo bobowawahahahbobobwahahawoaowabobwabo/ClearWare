@@ -1,5 +1,4 @@
-print("Currently patched/broken unable to fix.")
---[[local Config = {
+local Config = {
     WindowName = "< Clearware | Version 1.5 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
     Color = Color3.fromRGB(0,47,108),
@@ -245,4 +244,3 @@ Toggle4:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), functi
     Config.Keybind = Enum.KeyCode[Key]
 end)    
 Toggle4:SetState(true) 
-]]
