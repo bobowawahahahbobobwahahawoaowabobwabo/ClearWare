@@ -100,7 +100,7 @@ local Toggle1 = Section1:CreateToggle("Random Generated Time", nil, function(Sta
                 [1] = text
             }
             game:GetService("ReplicatedStorage"):WaitForChild("updateLocalTime"):FireServer(unpack(args))
-            wait()
+            task.wait() -- professional scripted!!
         end
     end
 end)
@@ -115,7 +115,7 @@ local Toggle2 = Section1:CreateToggle("Random Generated Time", nil, function(Sta
                 [1] = text
             }
             game:GetService("ReplicatedStorage"):WaitForChild("updateLocalTime"):FireServer(unpack(args))
-            wait()
+            task.wait()
         end
     end
 end)
@@ -130,7 +130,7 @@ local Toggle2 = Section1:CreateToggle("Inf time", nil, function(State)
                 [1] = text
             }
             game:GetService("ReplicatedStorage"):WaitForChild("updateLocalTime"):FireServer(unpack(args))
-            wait()
+            task.wait()
         end
     end
 end)
@@ -145,7 +145,7 @@ local Toggle3 = Section1:CreateToggle("Hide time", nil, function(State)
                 [1] = text
             }
             game:GetService("ReplicatedStorage"):WaitForChild("updateLocalTime"):FireServer(unpack(args))
-            wait()
+            task.wait()
         end
     end
 end)
