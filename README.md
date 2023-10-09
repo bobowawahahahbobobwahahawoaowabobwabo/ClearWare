@@ -1,5 +1,6 @@
 # Status
 [ Script Should work properly ]
+[ ! DISCOUNTINUED ! ]
 
 ---------------
 # Supported Executors (Tested on)
