@@ -9,7 +9,7 @@
   
 ---------------
 
-# Supporter Games
+# Supported Games
 
 + Rate My Avatar
 + Fishing Simulator
