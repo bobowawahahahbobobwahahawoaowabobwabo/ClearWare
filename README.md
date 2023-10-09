@@ -1,6 +1,5 @@
 # Status
-[ Script Should work properly ]
-[ ! DISCOUNTINUED ! ]
+[ Discontinued due to byfron/hyperion being added to uwp ]
 
 ---------------
 # Supported Executors (Tested on)
