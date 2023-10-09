@@ -1,3 +1,5 @@
+print("Discontinued due to byfron/hyperion being added to uwp")
+
 local Config = {
     WindowName = "< Clearware | Version 1.0 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
