@@ -1,5 +1,4 @@
-# Status
-Working🟢
+Status: 🟢
 
 # Supported Games
 
