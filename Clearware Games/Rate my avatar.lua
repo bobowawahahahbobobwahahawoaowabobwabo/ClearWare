@@ -1,5 +1,5 @@
 local Config = {
-    WindowName = "< Clearware | Version 1.6 >",
+    WindowName = "< Clearware | Version 1.7 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
     Color = Color3.fromRGB(0,47,108),
     Keybind = Enum.KeyCode.Z
@@ -127,161 +127,6 @@ for i=1, #s, 1 do
     task.wait(.1)
 end
 end)
-
-local Toggle6 = Section1:CreateToggle("Pug dancing GIF", nil, function(State)
-	toggle = State
-      if toggle then
-	pugCond = true
-	wait(0.2)
-	while pugCond == true do
-		local pugTab = {
-			"9837094480",
-			"9837094488",
-			"9837094535",
-			"9837094521",
-			"9837094517",
-			"9837094510",
-			"9837094538",
-			"9837094557",
-			"9837094537",
-			"9837094522",
-			"9837094520",
-			"9837094514",
-			"9837094506",
-			"9837094513",
-			"9837094530",
-			"9837094534",
-			"9837094518",
-			"9837094527",
-			"9837094528",
-			"9837094524",
-			"9837094550",
-			"9837094516",
-			"9837094525",
-		}
-		for _,v in pairs(pugTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if pugCond==false then
-				break
-			end
-			wait(.1)
-		end
-	end
-
-    else
-    pugCond = false
-        wait(1)
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-           end
-end)
-Toggle6:AddToolTip("Animated pug dancing")
-
--------------
-
-local Toggle7 = Section1:CreateToggle("Cat GIF", nil, function(State)
-	toggle = State
-
-    if State then
-	ripCatCond = true
-	wait(0.2)
-	while ripCatCond==true do
-		local ripCatTab = {
-			"9835316720",
-			"9835316733",
-			"9835316781",
-			"9835316773",
-			"9835316740",
-			"9835316736",
-			"9835316743",
-			"9835316749",
-			"9835316754",
-			"9835316761",
-			"9835316780",
-			"9835316785",
-			"9835316787",
-			"9835316775",
-		}
-		for _,v in pairs(ripCatTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if ripCatCond==false then
-				break
-			end
-			wait(.1)	
-		end
-	end
-    else
-    ripCatCond = false
-    wait(1)
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle7:AddToolTip("Cat gets hit by cereal")
-
--------------
-
-
-local Toggle8 = Section1:CreateToggle("Skull becomes 1 GIF", nil, function(State)
-	toggle = State
-
-    if State then
-	skullImploadCond = true
-	wait(0.2)
-	while skullImploadCond==true do
-		local skullImploadTab = {
-			"9835255683",
-			"9835255685",
-			"9835255688",
-			"9835255686",
-			"9835255675",
-			"9835255657",
-			"9835255659",
-			"9835255646",
-			"9835255720",
-		}
-		for _,v in pairs(skullImploadTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if skullImploadCond==false then
-				break
-			end
-			wait(.1)
-		end
-	end
-
-    else
-    skullImploadCond = false
-    wait(1)
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle8:AddToolTip("Skull becomes 1 again")
-
--------------
 
 local Toggle998 = Section1:CreateToggle("Fuck all countries", nil, function(State)
 _G.Enabled = State
@@ -511,7 +356,164 @@ while _G.Enabled do
     task.wait(3)
 end
 end)
-Toggle998:AddToolTip("Skull explodes")
+Toggle998:AddToolTip("Says i 'I hate this country'")
+
+Section1:CreateLabel("Booth GIFS")
+
+local Toggle6 = Section1:CreateToggle("Pug dancing GIF", nil, function(State)
+	toggle = State
+      if toggle then
+	pugCond = true
+	wait(0.2)
+	while pugCond == true do
+		local pugTab = {
+			"9837094480",
+			"9837094488",
+			"9837094535",
+			"9837094521",
+			"9837094517",
+			"9837094510",
+			"9837094538",
+			"9837094557",
+			"9837094537",
+			"9837094522",
+			"9837094520",
+			"9837094514",
+			"9837094506",
+			"9837094513",
+			"9837094530",
+			"9837094534",
+			"9837094518",
+			"9837094527",
+			"9837094528",
+			"9837094524",
+			"9837094550",
+			"9837094516",
+			"9837094525",
+		}
+		for _,v in pairs(pugTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if pugCond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+
+    else
+    pugCond = false
+        wait(1)
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+           end
+end)
+Toggle6:AddToolTip("Animated pug dancing")
+
+-------------
+
+local Toggle7 = Section1:CreateToggle("Cat GIF", nil, function(State)
+	toggle = State
+
+    if State then
+	ripCatCond = true
+	wait(0.2)
+	while ripCatCond==true do
+		local ripCatTab = {
+			"9835316720",
+			"9835316733",
+			"9835316781",
+			"9835316773",
+			"9835316740",
+			"9835316736",
+			"9835316743",
+			"9835316749",
+			"9835316754",
+			"9835316761",
+			"9835316780",
+			"9835316785",
+			"9835316787",
+			"9835316775",
+		}
+		for _,v in pairs(ripCatTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if ripCatCond==false then
+				break
+			end
+			wait(.1)	
+		end
+	end
+    else
+    ripCatCond = false
+    wait(1)
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+Toggle7:AddToolTip("Cat gets hit by cereal")
+
+-------------
+
+
+local Toggle8 = Section1:CreateToggle("Skull becomes 1 GIF", nil, function(State)
+	toggle = State
+
+    if State then
+	skullImploadCond = true
+	wait(0.2)
+	while skullImploadCond==true do
+		local skullImploadTab = {
+			"9835255683",
+			"9835255685",
+			"9835255688",
+			"9835255686",
+			"9835255675",
+			"9835255657",
+			"9835255659",
+			"9835255646",
+			"9835255720",
+		}
+		for _,v in pairs(skullImploadTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if skullImploadCond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+
+    else
+    skullImploadCond = false
+    wait(1)
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+Toggle8:AddToolTip("Skull becomes 1 again")
+
+-------------
 
 
 local Toggle8 = Section1:CreateToggle("Skull exploding GIF", nil, function(State)
@@ -933,22 +935,16 @@ Toggle14:AddToolTip("Auto gives you the role Knight when there is no one else wi
 
 
 
-local Button3 = Section1:CreateButton("Claim Knight", function()
+local Button3 = Section1:CreateButton("Goto Knight Stand", function()
 local plr = game.Players.LocalPlayer
 local old = plr.Character.HumanoidRootPart.CFrame
 local target = game:GetService("Workspace").JewelleryStand
 
 if target.Transparency ~= 1 then
 plr.Character.HumanoidRootPart.CFrame = CFrame.new(-246.630634765625, 4, -244.48513693945312)
-wait(0.1)
-game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game)
-wait(0.1)
-game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game)
-wait(0.35)
-plr.Character.HumanoidRootPart.CFrame = old
       end
 end)
-Button3:AddToolTip("Gives knight role if nobody else has it")
+Button3:AddToolTip("Goes to Knight Stand")
 
 ---------------------- Teleport Section
 Section1:CreateLabel("Teleport")
