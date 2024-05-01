@@ -6,11 +6,11 @@ local games = {
 }
 
 if game.PlaceId == games.fsim then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/Fishing%20Simulator.txt"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/Fishing%20Simulator.lua"))()
 elseif game.PlaceId == games.rmavatar then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/Rate%20my%20avatar.txt"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/Rate%20my%20avatar.lua"))()
 elseif game.PlaceId == games.fyweather then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/Flex%20Your%20Weather"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/Flex%20Your%20Weather.lua"))()
 elseif game.PlaceId == games.kat then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/knifeabilitytest"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/knifeabilitytest.lua"))()
 end
