@@ -1,5 +1,3 @@
-print("Discontinued due to byfron/hyperion being added to uwp")
-
 local Config = {
     WindowName = "< Clearware | Version 2.0 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
@@ -8,7 +6,7 @@ local Config = {
 }
 
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bobowawahahahbobobwahahawoaowabobwabo/libarys/main/Bracket%20V3.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/Bracket%20V3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 local Tab1 = Window:CreateTab(Config.detailsofgamename)
 
@@ -456,7 +454,7 @@ Slider4:SetValue(0.5)
 
 ----------------------- Credits // End of UI
 Section2:CreateLabel("Credits")
-Section2:CreateLabel("Jailedd: Owner")
+Section2:CreateLabel("xyzzr: Owner")
 Section2:CreateLabel("Lonelywhale: Contribution")
 
 
