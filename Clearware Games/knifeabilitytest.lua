@@ -235,8 +235,7 @@ Slider4:SetValue(0.5)
 
 ----------------------- Credits // End of UI
 Section2:CreateLabel("Credits")
-Section2:CreateLabel("Jailedd: Owner")
-Section2:CreateLabel("Lonelywhale: Contribution")
+Section2:CreateLabel("xyzzr: Owner")
 
 
 -- UI Keyblind setter
