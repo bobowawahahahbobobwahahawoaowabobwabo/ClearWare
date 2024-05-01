@@ -87,7 +87,7 @@ function switchServer()
     end
 end
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bobowawahahahbobobwahahawoaowabobwabo/libarys/main/Bracket%20V3.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/Bracket%20V3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 local Tab1 = Window:CreateTab(Config.detailsofgamename)
 local Section1 = Tab1:CreateSection("Main")
