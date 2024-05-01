@@ -1,5 +1,3 @@
-print("Discontinued due to byfron/hyperion being added to uwp")
-
 local Config = {
     WindowName = "< Clearware | Version 1.0 >",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
@@ -73,7 +71,7 @@ end
    return Old(Self, unpack(Args))
 end)
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bobowawahahahbobobwahahawoaowabobwabo/libarys/main/Bracket%20V3.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/Bracket%20V3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 local Tab1 = Window:CreateTab(Config.detailsofgamename)
 local Section1 = Tab1:CreateSection("Main")
