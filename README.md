@@ -1,13 +1,5 @@
 # Status
-[ Discontinued due to byfron/hyperion being added to uwp ]
-
----------------
-# Supported Executors (Tested on)
-
-+ Electron
-+ Fluxus
-  
----------------
+Working🟢
 
 # Supported Games
 
@@ -15,4 +7,3 @@
 + Fishing Simulator
 + Flex Your Weather
 + Kat
----------------
