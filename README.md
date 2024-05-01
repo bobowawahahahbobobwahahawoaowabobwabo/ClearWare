@@ -1,4 +1,4 @@
-Status: 🟢
+Status:🟢
 
 # Supported Games
 
