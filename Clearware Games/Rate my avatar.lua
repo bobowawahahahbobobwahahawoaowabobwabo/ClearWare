@@ -1105,7 +1105,7 @@ Slider4:SetValue(0.5)
 
 ----------------------- Credits // End of UI
 Section2:CreateLabel("Credits")
-Section2:CreateLabel("jailedd: Owner")
+Section2:CreateLabel("xyzzr: Owner")
 
 Toggle4:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), function(Key)
     Config.Keybind = Enum.KeyCode[Key]
