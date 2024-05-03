@@ -5,77 +5,6 @@ local Config = {
     Keybind = Enum.KeyCode.Z
 }
 
-local tpservice = game:GetService("TeleportService")
-local PlaceID = game.PlaceId
-local AllIDs = {}
-local foundAnything = ""
-local actualHour = os.date("!*t").hour
-local Deleted = false
-local File = pcall(function()
-    AllIDs = game:GetService('HttpService'):JSONDecode(readfile("NotSameServers.json"))
-end)
-if not File then
-    table.insert(AllIDs, actualHour)
-    writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
-end
-function TPReturner()
-    local Site;
-    if foundAnything == "" then
-        Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
-    else
-        Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
-    end
-    local ID = ""
-    if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
-        foundAnything = Site.nextPageCursor
-    end
-    local num = 0;
-    for i,v in pairs(Site.data) do
-        local Possible = true
-        ID = tostring(v.id)
-        if tonumber(v.maxPlayers) > tonumber(v.playing) then
-            for _,Existing in pairs(AllIDs) do
-                if num ~= 0 then
-                    if ID == tostring(Existing) then
-                        Possible = false
-                    end
-                else
-                    if tonumber(actualHour) ~= tonumber(Existing) then
-                        local delFile = pcall(function()
-                            delfile("NotSameServers.json")
-                            AllIDs = {}
-                            table.insert(AllIDs, actualHour)
-                        end)
-                    end
-                end
-                num = num + 1
-            end
-            if Possible == true then
-                table.insert(AllIDs, ID)
-                wait()
-                pcall(function()
-                    writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
-                    wait()
-                    game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
-                end)
-                wait(4)
-            end
-        end
-    end
-end
-
-function switchServer()
-    while wait() do
-        pcall(function()
-            TPReturner()
-            if foundAnything ~= "" then
-                TPReturner()
-            end
-        end)
-    end
-end
-
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/Bracket%20V3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 local Tab1 = Window:CreateTab(Config.detailsofgamename)
@@ -86,7 +15,6 @@ local ammo = "80"
 
 ---------------------- Start of script / First Section
 Section1:CreateLabel("Duping")
-
 -------------
 
 local Button1 = Section1:CreateButton("Crossbow minigun", function()
@@ -119,9 +47,6 @@ wait(5)
 local plr = game.Players.LocalPlayer
 local us = game:GetService("UserInputService")
 local m = plr:GetMouse()
-
-
-
 
 local gunning = false
 us.InputBegan:Connect(function(key,pro)
@@ -186,9 +111,7 @@ ammo = Value
 end)
 
 Slider535:AddToolTip("Changes duped crossbows")
-Section1:CreateLabel("Keyblinds")
-Section1:CreateLabel("T - Minigun   | G - Reload All")
-Section1:CreateLabel("V - Shoot All | C - Shoot 3")
+
 
 local Button525 = Section1:CreateButton("One shot bow", function()
 	for i = 1, 10 do
@@ -208,9 +131,7 @@ local function onKeyPress(input)
 end
 game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 end)
-Button525:AddToolTip("One shot bow")
-Section1:CreateLabel("Keyblinds")
-Section1:CreateLabel("G - Equip bows")
+Button525:AddToolTip("G to equip")
 
 -------------
 
@@ -251,16 +172,14 @@ end
 end)
 
 -------------
-
+Section1:CreateLabel("Keyblinds")
+Section1:CreateLabel("T - Minigun   | G - Reload All")
+Section1:CreateLabel("V - Shoot All | C - Shoot 3")
 
 local Toggle1 = Section1:CreateToggle("Toggle 1", nil, function(State)
 	print(State)
 end)
 Toggle1:AddToolTip("Just a toggle retard")
-
--------------
-
-
 
 -------------
 local Slider1 = Section1:CreateSlider("Slider 1", 0,100,nil,true, function(Value)
