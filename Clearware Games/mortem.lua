@@ -491,13 +491,6 @@ local Button2 = Section2:CreateButton("Anti-Afk", function()
 end)
 Button2:AddToolTip("Prevents roblox from kicking you when you are afk")
 
-local Button3 = Section2:CreateButton("Instant ProximityPrompt", function()
-game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(prompt)
-   prompt.HoldDuration = 0
-    end)
-end)
-Button3:AddToolTip("Proximity Prompts become instant")
-
 -------------------------------- UI Settings Section
 Section2:CreateLabel("UI Settings")
 
