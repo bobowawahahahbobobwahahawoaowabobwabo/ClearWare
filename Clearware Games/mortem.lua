@@ -1,5 +1,5 @@
 local Config = {
-    WindowName = "Clearware | Version 1.5B",
+    WindowName = "Clearware | Version 1.9B",
     detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name ,
     Color = Color3.fromRGB(0,47,108),
     Keybind = Enum.KeyCode.Z
@@ -11,7 +11,7 @@ local Tab1 = Window:CreateTab(Config.detailsofgamename)
 local Section1 = Tab1:CreateSection("Main")
 local Section2 = Tab1:CreateSection("Misc")
 local ammo = "80"
-
+print("Added autoparry, fixed problems with esp") -- hi
 
 ---------------------- Start of script / First Section
 Section1:CreateLabel("Duping")
@@ -53,12 +53,10 @@ us.InputBegan:Connect(function(key,pro)
    if not pro then
        if key.KeyCode == Enum.KeyCode.T then
            gunning = not gunning
-           
            if gunning then
                for i,v in pairs(plr.Backpack:GetChildren()) do
                    if v:FindFirstChild("Reloaded") and v.Reloaded.Value then
                        if not gunning then return end
-                       
                        plr.Character.Humanoid:EquipTool(v)
                        mouse1click()
                        wait()
@@ -176,35 +174,84 @@ Section1:CreateLabel("Keyblinds")
 Section1:CreateLabel("T - Minigun   | G - Reload All")
 Section1:CreateLabel("V - Shoot All | C - Shoot 3")
 
-local Toggle1 = Section1:CreateToggle("Toggle 1", nil, function(State)
-	print(State)
-end)
-Toggle1:AddToolTip("Just a toggle retard")
+Section1:CreateLabel("Auto-Parry")
 
--------------
-local Slider1 = Section1:CreateSlider("Slider 1", 0,100,nil,true, function(Value)
-	print(Value)
-end)
-Slider1:AddToolTip("Slider 1 ToolTip")
-Slider1:SetValue(50)
 
----------------------- A functioning dropdown
+local parryDist = 10
+local blacklist = {"someone you like", "someone else you like"} 
 
-local Dropdown1 = Section1:CreateDropdown("Dropdown", {"Example1","Example2","Example3", "Example4"}, function(String)
-    locationSelected = String
-end)
 
-local Button1 = Section1:CreateButton("Click this after selecting", function()
-    if locationSelected == "Example1" then
-            print("Whale is gay 1")
-        elseif locationSelected == "Example2" then
-            print("Whale is gay 2")
-        elseif locationSelected == "Example3" then
-             print("Whale is gay 3")
-        elseif locationSelected == "Example4" then
-            print("Whale is gay 4")
+local Button535357 = Section1:CreateButton("Enable Autoparry", function()
+	local parryDist = 10
+local blacklist = {"someone you like", "someone else you like"} 
+
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+local runService = game:GetService("RunService")
+local animIds = {
+    "rbxassetid://5416575259";
+    "rbxassetid://5428578390";
+    "rbxassetid://5428613396";
+    "rbxassetid://5435382827";
+    "rbxassetid://5435969402";
+    "rbxassetid://5431979188";
+    "rbxassetid://5436083192";
+    "rbxassetid://5436059670";
+    "rbxassetid://4061495031";
+    "rbxassetid://3857610554";
+    "rbxassetid://3857630958";
+    "rbxassetid://5435928313";
+    "rbxassetid://5424166879";
+}
+
+function getParryEvent()
+    for i, v in next, char:GetDescendants() do
+        if v:IsA("RemoteEvent") and v.Name == "ability" then
+            return v
+        end
     end
+    return nil
+end
+
+function parry()
+    local myParryEvent = getParryEvent()
+    if myParryEvent then
+        myParryEvent:FireServer()
+    end
+end
+
+function main()
+    while true do
+        pcall(function()
+            char = plr.Character
+            runService.RenderStepped:Wait()
+            for i, plrChar in next, workspace.PlayersCharacters:GetChildren() do
+                if plrChar ~= char and not table.find(blacklist, plrChar.Name) then
+                    local anims = plrChar.Humanoid:GetPlayingAnimationTracks()
+                    for _, anim in next, anims do
+                        if table.find(animIds, anim.Animation.AnimationId) then
+                            if (plrChar.HumanoidRootPart.Position - char.HumanoidRootPart.Position).Magnitude <= parryDist and plrChar.Humanoid.Health > 0 and not plrChar.Humanoid.PlatformStand then
+                                parry()
+                                wait(1) 
+                            end
+                        end
+                    end 
+                end 
+            end 
+        end)
+    end 
+end
+wait(0.1)
+main()
 end)
+Button535357:AddToolTip("Rejoin to disable, works best to heavy weapons")
+
+
+local Slider66461 = Section1:CreateSlider("Parry Trigger Distance", 5,20,12,true, function(Value)
+    local parryDist = Value
+    local blacklist = {"someone you like", "someone else you like"} 
+end)
+Slider66461:AddToolTip("Changes Auto parry Trigger distance")
 
 ----------------------- Player Movement Section
 Section1:CreateLabel("Client Movement")
