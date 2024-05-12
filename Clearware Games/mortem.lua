@@ -484,6 +484,28 @@ local Slider3 = Section2:CreateSlider("Box Thickness",1,6,nil,false, function(Va
 end)
 
 ----------------------- Other Section
+Section2:CreateLabel("Map")
+local Toggle6346 = Section2:CreateToggle("Anti-Lag", nil, function(State)
+   while State == true do
+    for _, explosion in ipairs(workspace.Explosions:GetChildren()) do
+        if explosion.Name == "BombProp" or explosion.Name == "WaterFlask" or explosion.Name == "Molotovprop" then
+            explosion:Destroy()
+        end
+    end
+    wait(5)
+end
+end)
+Toggle6346:AddToolTip("Basically anti frozen explosives, (anti lonelynuker) ")
+
+
+local Toggle63446 = Section2:CreateToggle("Halloween Map", nil, function(State)
+ print("not made yet sorry lol")
+end)
+
+Toggle63446:AddToolTip("Client sided Halloween map (fuck you dev) ")
+
+
+
 Section2:CreateLabel("Other")
 
 local Button2 = Section2:CreateButton("Anti-Afk", function()
