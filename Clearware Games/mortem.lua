@@ -121,7 +121,7 @@ local Button525 = Section1:CreateButton("One shot bow", function()
 end
 
 local function onKeyPress(input)
-    if input.KeyCode == Enum.KeyCode.G then
+    if input.KeyCode == Enum.KeyCode.X then
         for i = 1, 10 do
              game.Players.LocalPlayer.Backpack["Long bow"].Parent = game.Players.LocalPlayer.Character
        end
@@ -129,7 +129,7 @@ local function onKeyPress(input)
 end
 game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 end)
-Button525:AddToolTip("G to equip")
+Button525:AddToolTip("X to equip")
 
 -------------
 
