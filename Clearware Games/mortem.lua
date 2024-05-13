@@ -244,7 +244,7 @@ end
 wait(0.1)
 main()
 end)
-Button535357:AddToolTip("Rejoin to disable, works best to heavy weapons")
+Button535357:AddToolTip("Rejoin to disable, works best with low ping (below 100ms) ")
 
 
 local Slider66461 = Section1:CreateSlider("Parry Trigger Distance", 5,20,12,true, function(Value)
