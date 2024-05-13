@@ -497,22 +497,6 @@ end
 end)
 Toggle6346:AddToolTip("Basically anti frozen explosives, (anti lonelynuker) ")
 
-
-local Toggle63446 = Section2:CreateToggle("Halloween Map", nil, function(State)
- print("not made yet sorry lol")
-end)
-
-Toggle63446:AddToolTip("Client sided Halloween map (fuck you dev) ")
-
-
-
-Section2:CreateLabel("Other")
-
-local Button2 = Section2:CreateButton("Anti-Afk", function()
-	print("Click Button 1")
-end)
-Button2:AddToolTip("Prevents roblox from kicking you when you are afk")
-
 -------------------------------- UI Settings Section
 Section2:CreateLabel("UI Settings")
 
