@@ -7,15 +7,30 @@ local Config = {
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/Bracket%20V3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
-local Tab1 = Window:CreateTab(Config.detailsofgamename)
+
+-- Rage tab
+local Tab1 = Window:CreateTab("Rage Cheating")
 local Section1 = Tab1:CreateSection("Main")
 local Section2 = Tab1:CreateSection("Misc")
+-- legit tab
+local Tab2 = Window:CreateTab("Legit Cheating")
+local Section3 = Tab2:CreateSection("Main")
+local Section4 = Tab2:CreateSection("Misc")
+-- visual tab
+local Tab3 = Window:CreateTab("Visuals")
+local Section5 = Tab3:CreateSection("")
+local Section6 = Tab3:CreateSection("")
+
 local ammo = "80"
 print("Made antilag") -- hi
 
----------------------- Start of script / First Section
+
+
+
+
+
+-- [[ Rage Cheating ]] --
 Section1:CreateLabel("Duping")
--------------
 
 local Button1 = Section1:CreateButton("Crossbow minigun", function()
 	local plr = game.Players.LocalPlayer
@@ -131,7 +146,6 @@ game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 end)
 Button525:AddToolTip("X to equip")
 
--------------
 
 local TextBox1 = Section1:CreateTextBox("Teleport grenades", "Enter Username", false, function(Value)
 	local target = Value
@@ -169,19 +183,53 @@ for i = 1, 100 do
 end
 end)
 
--------------
+
 Section1:CreateLabel("Keyblinds")
 Section1:CreateLabel("T - Minigun   | G - Reload All")
 Section1:CreateLabel("V - Shoot All | C - Shoot 3")
 
-Section1:CreateLabel("Auto-Parry")
+
+Section1:CreateLabel("Client Movement")
+
+
+local Slider1 = Section1:CreateSlider("Walkspeed", 16,25,16,true, function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end)
+local Slider1 = Section1:CreateSlider("Jumppower", 50,100,50,true, function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+end)
+
+
+local Toggle2 = Section1:CreateToggle("Infinite jump", nil, function(State)
+    toggle = State
+       local Player = game:GetService("Players").LocalPlayer
+        Player:GetMouse().KeyDown:connect(function(k)
+        if toggle then
+            wait()
+           if k:byte() == 32 then
+           Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+           Humanoid:ChangeState("Jumping")
+           wait(0.1)
+           Humanoid:ChangeState("Seated")
+                  end
+            end
+      end)
+end)
+
+
+
+
+-- [[ Legit Cheating ]] --
+
+
+Section3:CreateLabel("Auto-Parry")
 
 
 local parryDist = 10
 local blacklist = {"someone you like", "someone else you like"} 
 
 
-local Button535357 = Section1:CreateButton("Enable Autoparry", function()
+local Button535357 = Section3:CreateButton("Enable Autoparry", function()
 	local parryDist = 10
 local blacklist = {"someone you like", "someone else you like"} 
 
@@ -247,41 +295,16 @@ end)
 Button535357:AddToolTip("Rejoin to disable, works best with low ping (below 100ms) ")
 
 
-local Slider66461 = Section1:CreateSlider("Parry Trigger Distance", 5,20,12,true, function(Value)
+local Slider66461 = Section3:CreateSlider("Parry Trigger Distance", 5,20,12,true, function(Value)
     local parryDist = Value
     local blacklist = {"someone you like", "someone else you like"} 
 end)
 Slider66461:AddToolTip("Changes Auto parry Trigger distance")
 
------------------------ Player Movement Section
-Section1:CreateLabel("Client Movement")
 
 
-local Slider1 = Section1:CreateSlider("Walkspeed", 16,25,16,true, function(Value)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-end)
-local Slider1 = Section1:CreateSlider("Jumppower", 50,100,50,true, function(Value)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-end)
 
-
-local Toggle2 = Section1:CreateToggle("Infinite jump", nil, function(State)
-    toggle = State
-       local Player = game:GetService("Players").LocalPlayer
-        Player:GetMouse().KeyDown:connect(function(k)
-        if toggle then
-            wait()
-           if k:byte() == 32 then
-           Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-           Humanoid:ChangeState("Jumping")
-           wait(0.1)
-           Humanoid:ChangeState("Seated")
-                  end
-            end
-      end)
-end)
-
--------------
+-- [[ Visuals ]] --
 
 _G.ScriptExecuted = false
 _G.Settings = {
@@ -293,9 +316,9 @@ _G.Settings = {
     enabled = false  -- Initially disabled
 }
 
-Section2:CreateLabel("Visuals")
+Section5:CreateLabel("Visuals")
 
-local Toggle55783 = Section2:CreateToggle("Toggle 2D boxes", nil, function(State)
+local Toggle55783 = Section5:CreateToggle("Toggle 2D boxes", nil, function(State)
     _G.Settings.enabled = State -- Update enabled state based on toggle
 
     if State then -- If enabled
@@ -472,7 +495,7 @@ end)
 Toggle55783:AddToolTip("Toggles 2D esp boxes")
 
 
-local Slider3 = Section2:CreateSlider("Box Thickness",1,6,nil,false, function(Value)
+local Slider3 = Section5:CreateSlider("Box Thickness",1,6,nil,false, function(Value)
         _G.Settings = {
         Box_Color = Color3.fromRGB(255, 0, 0),
         Box_Thickness = Value,
@@ -497,7 +520,17 @@ end
 end)
 Toggle6346:AddToolTip("Basically anti frozen explosives, (anti lonelynuker) ")
 
--------------------------------- UI Settings Section
+
+
+
+
+
+
+
+
+
+
+-- [[ Misc ]] --
 Section2:CreateLabel("UI Settings")
 
 local Toggle4 = Section2:CreateToggle("UI Toggle", nil, function(State)
