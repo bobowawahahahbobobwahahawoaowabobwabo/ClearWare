@@ -11,7 +11,7 @@ local Tab1 = Window:CreateTab(Config.detailsofgamename)
 local Section1 = Tab1:CreateSection("Main")
 local Section2 = Tab1:CreateSection("Misc")
 local ammo = "80"
-print("Added autoparry, fixed problems with esp") -- hi
+print("Made antilag") -- hi
 
 ---------------------- Start of script / First Section
 Section1:CreateLabel("Duping")
