@@ -257,10 +257,10 @@ Slider66461:AddToolTip("Changes Auto parry Trigger distance")
 Section1:CreateLabel("Client Movement")
 
 
-local Slider1 = Section1:CreateSlider("Walkspeed", 16,500,16,true, function(Value)
+local Slider1 = Section1:CreateSlider("Walkspeed", 16,25,16,true, function(Value)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 end)
-local Slider1 = Section1:CreateSlider("Jumppower", 50,500,50,true, function(Value)
+local Slider1 = Section1:CreateSlider("Jumppower", 50,100,50,true, function(Value)
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 end)
 
