@@ -1,9 +1,6 @@
-Status:🟢
+[CHANGELOG]
 
-# Supported Games
-
-+ Rate My Avatar *1.7*
-+ Fishing Simulator *2.0*
-+ Flex Your Weather *2.0*
-+ Kat *v1*
-+ Mortem Metallum [Alpha] *v1.5*
++ Pumped rate my avatar script v to 1.9
++ new features
++ animations remade & organized
+- tried to make booth anims work for sign but impossible since they are decal ids not image ids
