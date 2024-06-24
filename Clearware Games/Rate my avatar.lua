@@ -1,13 +1,11 @@
 local Config = {
-    WindowName = "< Clearware | Version 1.7 >",
-    detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " | " .. game.PlaceId,
+    WindowName = "Clearware | Version 1.9",
+    detailsofgamename = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
     Color = Color3.fromRGB(0,47,108),
     Keybind = Enum.KeyCode.Z
 }
 
-local tpservice = game:GetService("TeleportService")
 
--- instant hold e for auto knight and knight
 for i, v in pairs(workspace:GetDescendants()) do
   if v.ClassName == "ProximityPrompt" then
     v.HoldDuration = 0
@@ -87,873 +85,28 @@ function switchServer()
     end
 end
 
+
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/Bracket%20V3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
-local Tab1 = Window:CreateTab(Config.detailsofgamename)
+
+local Tab1 = Window:CreateTab("Misc")
+local Tab2 = Window:CreateTab("Animating")
+
 local Section1 = Tab1:CreateSection("Main")
 local Section2 = Tab1:CreateSection("Misc")
 
+local Section3 = Tab2:CreateSection("Booth")
+local Section4 = Tab2:CreateSection("Signs")
 
 
----------------------- Start of script / Booth Section
-Section1:CreateLabel("Booth editing")
 
 
-
-local TextBox1 = Section1:CreateTextBox("Text Wrap", "Enter string", false, function(Value)
-    local s = Value
-
-local updater = game:GetService("ReplicatedStorage").CustomiseBooth
-local function update(text)
-    local args = {
-        [1] = "Update",
-        [2] = {
-            ["DescriptionText"] = text,
-            ["ImageId"] = 0
-        }
-    }
-    
-    updater:FireServer(unpack(args))
-end
-
-local ls = ""
-for i=1, #s, 1 do
-    local m = i % #s
-    ls = ls .. s:sub(m, m)
-    if i > 50 then
-        ls = ls:sub(2)
-    end
-    coroutine.wrap(update)(ls)
-    task.wait(.1)
-end
-end)
-
-local Toggle998 = Section1:CreateToggle("Fuck all countries", nil, function(State)
-_G.Enabled = State
-
-local updater = game:GetService("ReplicatedStorage").CustomiseBooth
-function update(text)
-    local args = {
-        [1] = "Update",
-        [2] = {
-            ["DescriptionText"] = text,
-            ["ImageId"] = 0
-        }
-    }
-    updater:FireServer(unpack(args))
-end
-countries = [[Afghanistan
-Albania
-Algeria
-American Samoa
-Andorra
-Angola
-Antigua and Barbuda
-Argentina
-Armenia
-Australia
-Austria
-Bahamas
-Bahrain
-Bangladesh
-Barbados
-Belarus
-Belgium
-Belize
-Benin
-Bermuda
-Bhutan
-Bolivia
-Bosnia and Herzegovina
-Botswana
-Brazil
-Brunei
-Bulgaria
-Burkina Faso
-Burundi
-Cambodia
-Cameroon
-Canada
-Cape Verde
-Central African Republic
-Chad
-Chile
-China
-Colombia
-Comoros
-Congo, Democratic Republic of the
-Congo, Republic of the
-Costa Rica
-C&ocirc;te d'Ivoire
-Croatia
-Cuba
-Cyprus
-Czech Republic
-Denmark
-Djibouti
-Dominica
-Dominican Republic
-East Timor
-Ecuador
-Egypt
-El Salvador
-Equatorial Guinea
-Eritrea
-Estonia
-Ethiopia
-Fiji
-Finland
-France
-Gabon
-Gambia
-Georgia
-Germany
-Ghana
-Greece
-Greenland
-Grenada
-Guam
-Guatemala
-Guinea
-Guinea-Bissau
-Guyana
-Haiti
-Honduras
-Hong Kong
-Hungary
-Iceland
-India
-Indonesia
-Iran
-Iraq
-Ireland
-Israel
-Italy
-Jamaica
-Japan
-Jordan
-Kazakhstan
-Kenya
-Kiribati
-North Korea
-South Korea
-Kuwait
-Kyrgyzstan
-Laos
-Latvia
-Lebanon
-Lesotho
-Liberia
-Libya
-Liechtenstein
-Lithuania
-Luxembourg
-Macedonia
-Madagascar
-Malawi
-Malaysia
-Maldives
-Mali
-Malta
-Marshall Islands
-Mauritania
-Mauritius
-Mexico
-Micronesia
-Moldova
-Monaco
-Mongolia
-Montenegro
-Morocco
-Mozambique
-Myanmar
-Namibia
-Nauru
-Nepal
-Netherlands
-New Zealand
-Nicaragua
-Niger
-Nigeria
-Norway
-Northern Mariana Islands
-Oman
-Pakistan
-Palau
-Palestine
-Panama
-Papua New Guinea
-Paraguay
-Peru
-Philippines
-Poland
-Portugal
-Puerto Rico
-Qatar
-Romania
-Russia
-Rwanda
-Saint Kitts and Nevis
-Saint Lucia
-Saint Vincent and the Grenadines
-Samoa
-San Marino
-Sao Tome and Principe
-Saudi Arabia
-Senegal
-Serbia and Montenegro
-Seychelles
-Sierra Leone
-Singapore
-Slovakia
-Slovenia
-Solomon Islands
-Somalia
-South Africa
-Spain
-Sri Lanka
-Sudan
-Sudan, South
-Suriname
-Swaziland
-Sweden
-Switzerland
-Syria
-Taiwan
-Tajikistan
-Tanzania
-Thailand
-Togo
-Tonga
-Trinidad and Tobago
-Tunisia
-Turkey
-Turkmenistan
-Tuvalu
-Uganda
-Ukraine
-United Arab Emirates
-United Kingdom
-United States
-Uruguay
-Uzbekistan
-Vanuatu
-Vatican City
-Venezuela
-Vietnam
-Virgin Islands, British
-Virgin Islands, U.S.
-Yemen
-Zambia
-Zimbabwe]]
-local countrieslist = {}
-for country in countries:gmatch("[^\r\n]+") do
-    table.insert(countrieslist, country)
-end
-
-while _G.Enabled do
-    coroutine.wrap(update)("i hate " .. countrieslist[math.random(1, #countrieslist)])
-    task.wait(3)
-end
-end)
-Toggle998:AddToolTip("Says i 'I hate this country'")
-
-Section1:CreateLabel("Booth GIFS")
-
-local Toggle6 = Section1:CreateToggle("Pug dancing GIF", nil, function(State)
-	toggle = State
-      if toggle then
-	pugCond = true
-	wait(0.2)
-	while pugCond == true do
-		local pugTab = {
-			"9837094480",
-			"9837094488",
-			"9837094535",
-			"9837094521",
-			"9837094517",
-			"9837094510",
-			"9837094538",
-			"9837094557",
-			"9837094537",
-			"9837094522",
-			"9837094520",
-			"9837094514",
-			"9837094506",
-			"9837094513",
-			"9837094530",
-			"9837094534",
-			"9837094518",
-			"9837094527",
-			"9837094528",
-			"9837094524",
-			"9837094550",
-			"9837094516",
-			"9837094525",
-		}
-		for _,v in pairs(pugTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if pugCond==false then
-				break
-			end
-			wait(.1)
-		end
-	end
-
-    else
-    pugCond = false
-        wait(1)
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-           end
-end)
-Toggle6:AddToolTip("Animated pug dancing")
-
--------------
-
-local Toggle7 = Section1:CreateToggle("Cat GIF", nil, function(State)
-	toggle = State
-
-    if State then
-	ripCatCond = true
-	wait(0.2)
-	while ripCatCond==true do
-		local ripCatTab = {
-			"9835316720",
-			"9835316733",
-			"9835316781",
-			"9835316773",
-			"9835316740",
-			"9835316736",
-			"9835316743",
-			"9835316749",
-			"9835316754",
-			"9835316761",
-			"9835316780",
-			"9835316785",
-			"9835316787",
-			"9835316775",
-		}
-		for _,v in pairs(ripCatTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if ripCatCond==false then
-				break
-			end
-			wait(.1)	
-		end
-	end
-    else
-    ripCatCond = false
-    wait(1)
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle7:AddToolTip("Cat gets hit by cereal")
-
--------------
-
-
-local Toggle8 = Section1:CreateToggle("Skull becomes 1 GIF", nil, function(State)
-	toggle = State
-
-    if State then
-	skullImploadCond = true
-	wait(0.2)
-	while skullImploadCond==true do
-		local skullImploadTab = {
-			"9835255683",
-			"9835255685",
-			"9835255688",
-			"9835255686",
-			"9835255675",
-			"9835255657",
-			"9835255659",
-			"9835255646",
-			"9835255720",
-		}
-		for _,v in pairs(skullImploadTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if skullImploadCond==false then
-				break
-			end
-			wait(.1)
-		end
-	end
-
-    else
-    skullImploadCond = false
-    wait(1)
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle8:AddToolTip("Skull becomes 1 again")
-
--------------
-
-
-local Toggle8 = Section1:CreateToggle("Skull exploding GIF", nil, function(State)
-	toggle = State
-
-    if State then
-skullExplodeCond = true
-	wait(0.2)
-	while skullExplodeCond==true do
-		local skullExplodeTab = {
-			"9835255720",
-            "9835255646",
-            "9835255659",
-            "9835255657",
-            "9835255675",
-            "9835255686",
-            "9835255688",
-            "9835255685",
-            "9835255683",
-		}
-		for _,v in pairs(skullExplodeTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if skullExplodeCond==false then
-				break
-			end
-			wait(.1)
-		end
-
-	end
-    else
-    skullExplodeCond = false
-    wait(1)
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle8:AddToolTip("Skull explodes")
-
--------------
-
-local Toggle9 = Section1:CreateToggle("Cabybara pulls up GIF", nil, function(State)
-	toggle = State
-
-   if State then
-capybaraCarCond = true
-	wait(0.2)
-	while capybaraCarCond==true do
-		local capybaraCarTab = {
-			"9835192311",
-			"9835192318",
-			"9835192328",
-			"9835192332",
-			"9835192342",
-			"9835192343",
-			"9835192356",
-			"9835192354",
-			"9835192340",
-			"9835192409",
-			"9835192407",
-		}
-
-		for _,v in pairs(capybaraCarTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if capybaraCarCond==false then
-				break
-			end
-			wait(.1)
-		end
-	end
-    else
-    wait(2)
-    capybaraCarCond = false
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle9:AddToolTip("Cabybara i pull up meme")
-
--------------
-
-local Toggle10 = Section1:CreateToggle("Rat Spinning GIF", nil, function(State)
-	toggle = State
-
-   if State then
-spinningRatCond = true
-	wait(0.2)
-	while spinningRatCond == true do
-		local spinningRatTab = {
-			"9835143999",
-			"9835144007",
-			"9835144021",
-			"9835144008",
-			"9835144032",
-			"9835144027",
-			"9835144015",
-			"9835144038",
-			"9835144026",
-			"9835144019",
-			"9835144033",
-			"9835144035",
-			"9835144036",
-			"9835144031",
-			"9835144061",
-			"9835144037",
-
-		}
-		for _,v in pairs(spinningRatTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if spinningRatCond==false then
-				break
-			end
-			wait(.1)
-		end
-	end
-    else
-    wait(2)
-    spinningRatCond = false
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle10:AddToolTip("Rat Spinning")
-
--------------
-
-local Toggle11 = Section1:CreateToggle("Cat Dancing GIF", nil, function(State)
-	toggle = State
-
-   if State then
-    happyCatCond = true
-	wait(0.1)
-	while happyCatCond==true do
-		local happyCatTab = {
-			"9835002079",
-			"9835002136",
-			"9835002131",
-			"9835002084",
-			"9835002080",
-			"9835002086",
-			"9835002078",
-			"9835002086",
-			"9835002115",
-			"9835002120",
-			"9835002096",
-			"9835002129",
-			"9835002100",
-			"9835002112",
-			"9835002098",
-
-		}
-		for _,v in pairs(happyCatTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if happyCatCond==false then
-				break
-			end
-			wait(.1)
-		end
-	end
-    else
-    wait(2)
-    happyCatCond = false
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-    game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle11:AddToolTip("Happy cat dancing")
-
--------------
-
-local Toggle12 = Section1:CreateToggle("Yipeee GIF", nil, function(State)
-	toggle = State
-
-   if State then
-        yipeeCond = true
-       while yipeeCond==true do
-		local yipeeTab = {
-			"9834224327",
-			"9834224367",
-			"9834224378",
-			"9834224390",
-			"9834224358",
-			"9834224395",
-			"9834224420",
-			"9834224394",
-			"9834224333",
-			"9834224348",
-			"9834224386",
-			"9834224368",
-			"9834224407",
-
-		}
-		for _,v in pairs(yipeeTab) do
-			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
-			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
-			if yipeeCond==false then
-				break
-			end
-			wait(.1)
-		end
-	end
-    else
-    wait(2)
-    yipeeCond = false
-        local args = {
-    [1] = "Update",
-    [2] = {
-        ["DescriptionText"] = "",
-        ["ImageId"] = 13976194703,
-    },
-}
-
-game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
-    end
-end)
-Toggle12:AddToolTip("Yiphee gif")
-
------------------------ Image Sign Section
-Section1:CreateLabel("Image Sign")
-
-local Toggle15 = Section1:CreateToggle("Skeleton Running GIF", nil, function(State)
-	toggle = State
-   if State then
-        	Cond = true
-	task.wait(.1)
-	while Cond==true do
-		local Tab = {
-			"9888761068",
-			"9888760854",
-			"9888754640",
-			"9888754491",
-			"9888754373",
-			"9888754246",
-			"9888754109",
-			"9888753970",
-			"9888753820",
-		}
-		for _,v in pairs(Tab) do
-			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
-			if Cond==false then
-				break
-			end
-			task.wait(.1)
-		end
-	end
-    else
-        Cond = false
-		task.wait(.1)
-		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
-    end
-end)
-Toggle15:AddToolTip("Plays an gif of an skeleton Running")
-
-local Toggle17 = Section1:CreateToggle("Happy monkey circle GIF", nil, function(State)
-	toggle = State
-        if State then
-        	Cond = true
-	task.wait(.1)
-	while Cond==true do
-		local Tab = {
-			"9888794477",
-			"9888788087",
-			"9888787850",
-			"9888787557",
-			"9888787334",
-			"9888787028",
-			"9888786790",
-			"9888786611",
-			"9888786410",
-		}
-		for _,v in pairs(Tab) do
-			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
-			if Cond==false then
-				break
-			end
-			task.wait(.1)
-		end
-	end
-    else
-        Cond = false
-		task.wait(.1)
-		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
-    end
-end)
-Toggle17:AddToolTip("Plays an gif of happy monkey circle")
-
-local Toggle16 = Section1:CreateToggle("Rock rising his eyebrow GIF", nil, function(State)
-	toggle = State
-        if State then
-        	Cond = true
-	task.wait(.1)
-	while Cond==true do
-		local Tab = {
-			"9888770515",
-			"9888770296",
-			"9888769916",
-			"9888769634",
-			"9888769284",
-			"9888769008",
-			"9888768794",
-			"9888768523",
-			"9888763095",
-			"9888762892",
-			"9888762699",
-			"9888762367",
-			"9888762114",
-			"9888761941",
-			"9888761689",
-			"9888761246",
-		}
-		for _,v in pairs(Tab) do
-			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
-			if Cond==false then
-				break
-			end
-			task.wait(.1)
-		end
-	end
-    else
-        Cond = false
-		task.wait(.1)
-		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
-    end
-end)
-Toggle16:AddToolTip("Plays an gif of Rock rising his eyebrow")
-
-local Toggle18 = Section1:CreateToggle("Spongebob fish GIF", nil, function(State)
-	toggle = State
-        if State then
-        	Cond = true
-	task.wait(.1)
-	while Cond==true do
-		local Tab = {
-			"9888816960",
-			"9888816536",
-			"9888816224",
-			"9888810253",
-			"9888810067",
-			"9888809922",
-			"9888809764",
-			"9888809324",
-			"9888803341",
-			"9888802915",
-			"9888802721",
-			"9888802431",
-			"9888795511",
-			"9888795328",
-		}
-		for _,v in pairs(Tab) do
-			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
-			if Cond==false then
-				break
-			end
-			task.wait(.1)
-		end
-	end
-    else
-        Cond = false
-		task.wait(.1)
-		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
-    end
-end)
-Toggle18:AddToolTip("Plays an gif spongebob fish")
-
------------------------ Knight Section
-Section1:CreateLabel("Knight")
-
-local Toggle14 = Section1:CreateToggle("Auto-Knight", nil, function(State)
-toggle = State
-
-local plr = game.Players.LocalPlayer
-local old = plr.Character.HumanoidRootPart.CFrame
-local target = game:GetService("Workspace").JewelleryStand
-
-if target.Transparency ~= 1 then
-if toggle then
-plr.Character.HumanoidRootPart.CFrame = CFrame.new(-246.630634765625, 4, -244.48513693945312)
-wait(0.1)
-game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game)
-wait(0.1)
-game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game)
-wait(0.35)
-plr.Character.HumanoidRootPart.CFrame = old
-      end
-   end
-end)
-Toggle14:AddToolTip("Auto gives you the role Knight when there is no one else with the role")
-
-
-
-local Button3 = Section1:CreateButton("Goto Knight Stand", function()
-local plr = game.Players.LocalPlayer
-local old = plr.Character.HumanoidRootPart.CFrame
-local target = game:GetService("Workspace").JewelleryStand
-
-if target.Transparency ~= 1 then
-plr.Character.HumanoidRootPart.CFrame = CFrame.new(-246.630634765625, 4, -244.48513693945312)
-      end
-end)
-Button3:AddToolTip("Goes to Knight Stand")
-
----------------------- Teleport Section
-Section1:CreateLabel("Teleport")
-
-local Dropdown1 = Section1:CreateDropdown("Locations", {"Spawn","Underground Club","Item Shop", "Top Rated Leaderboard"}, function(String)
+local Dropdown1 = Section1:CreateDropdown("Locations", {"Spawn","Underground Club","Item Shop", "Top Rated Leaderboard","Knight stand"}, function(String)
     locationSelected = String
 end)
 
-local Button1 = Section1:CreateButton("Goto", function()
+local Button1 = Section1:CreateButton("tp", function()
     if locationSelected == "Spawn" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8.464311599731445, 3.1999993324279785, 7.044642925262451)
         elseif locationSelected == "Underground Club" then
@@ -962,11 +115,17 @@ local Button1 = Section1:CreateButton("Goto", function()
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-61.35231399536133, 2.99999992847442627, 54.361083984375)
         elseif locationSelected == "Top Rated Leaderboard" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-61.438018798828125, 2.9999999523162842, -36.879432678222656)
+        elseif locationSelected == "Knight stand" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-246.630634765625, 4, -244.48513693945312)
     end
 end)
 
------------------------ Player Movement Section
-Section1:CreateLabel("Client Movement")
+
+
+
+
+
+Section1:CreateLabel("Client")
 
 
 local Slider1 = Section1:CreateSlider("Walkspeed", 16,500,16,true, function(Value)
@@ -1011,8 +170,6 @@ spawn(function()
 end)
 Toggle13:AddToolTip("Anti Booth Blacklist")
 
------------------------ Other Section
-Section2:CreateLabel("Other")
 
 local Toggle14 = Section2:CreateToggle("Enable Chat", nil, function(State)
     toggle = State
@@ -1037,14 +194,6 @@ local Button2 = Section2:CreateButton("Anti-Afk", function()
      end)
 end)
 Button2:AddToolTip("Prevents roblox from kicking you when you are afk")
-
-local Button4 = Section2:CreateButton("Realistic Graphics", function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/XjZ7N9zg"))() -- Creds to lonelywhale
-end)
-Button4:AddToolTip("Realistic graphics | Credits to Lonelywhale")
-
------------------------ Server Tab
-Section2:CreateLabel("Server")
 
 local Button4 = Section2:CreateButton("Rejoin", function()
 tpservice:Teleport(game.PlaceId, plr)
@@ -1099,6 +248,9 @@ end)
 Slider4:SetValue(0.5)
 
 
+
+
+
 ----------------------- Credits // End of UI
 Section2:CreateLabel("Credits")
 Section2:CreateLabel("xyzzr: Owner")
@@ -1107,3 +259,909 @@ Toggle4:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), functi
     Config.Keybind = Enum.KeyCode[Key]
 end)    
 Toggle4:SetState(true) 
+
+
+
+-- animating tab thingie thingie tabt hingie yes
+
+
+local Toggle6 = Section3:CreateToggle("Pug dancing", nil, function(State)
+	toggle = State
+      if toggle then
+	pugCond = true
+	wait(0.2)
+	while pugCond == true do
+		local pugTab = {
+			"9837094480",
+			"9837094488",
+			"9837094535",
+			"9837094521",
+			"9837094517",
+			"9837094510",
+			"9837094538",
+			"9837094557",
+			"9837094537",
+			"9837094522",
+			"9837094520",
+			"9837094514",
+			"9837094506",
+			"9837094513",
+			"9837094530",
+			"9837094534",
+			"9837094518",
+			"9837094527",
+			"9837094528",
+			"9837094524",
+			"9837094550",
+			"9837094516",
+			"9837094525",
+		}
+		for _,v in pairs(pugTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if pugCond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+
+    else
+    pugCond = false
+        wait(1)
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+           end
+end)
+
+
+-------------
+
+local Toggle7 = Section3:CreateToggle("Cat", nil, function(State)
+	toggle = State
+
+    if State then
+	ripCatCond = true
+	wait(0.2)
+	while ripCatCond==true do
+		local ripCatTab = {
+			"9835316720",
+			"9835316733",
+			"9835316781",
+			"9835316773",
+			"9835316740",
+			"9835316736",
+			"9835316743",
+			"9835316749",
+			"9835316754",
+			"9835316761",
+			"9835316780",
+			"9835316785",
+			"9835316787",
+			"9835316775",
+		}
+		for _,v in pairs(ripCatTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if ripCatCond==false then
+				break
+			end
+			wait(.1)	
+		end
+	end
+    else
+    ripCatCond = false
+    wait(1)
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+
+
+-------------
+
+
+local Toggle8 = Section3:CreateToggle("Skull becomes 1", nil, function(State)
+	toggle = State
+
+    if State then
+	skullImploadCond = true
+	wait(0.2)
+	while skullImploadCond==true do
+		local skullImploadTab = {
+			"9835255683",
+			"9835255685",
+			"9835255688",
+			"9835255686",
+			"9835255675",
+			"9835255657",
+			"9835255659",
+			"9835255646",
+			"9835255720",
+		}
+		for _,v in pairs(skullImploadTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if skullImploadCond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+
+    else
+    skullImploadCond = false
+    wait(1)
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+
+
+-------------
+
+
+local Toggle8 = Section3:CreateToggle("Skull exploding", nil, function(State)
+	toggle = State
+
+    if State then
+skullExplodeCond = true
+	wait(0.2)
+	while skullExplodeCond==true do
+		local skullExplodeTab = {
+			"9835255720",
+            "9835255646",
+            "9835255659",
+            "9835255657",
+            "9835255675",
+            "9835255686",
+            "9835255688",
+            "9835255685",
+            "9835255683",
+		}
+		for _,v in pairs(skullExplodeTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if skullExplodeCond==false then
+				break
+			end
+			wait(.1)
+		end
+
+	end
+    else
+    skullExplodeCond = false
+    wait(1)
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+
+
+-------------
+
+local Toggle9 = Section3:CreateToggle("Cabybara pulls up", nil, function(State)
+	toggle = State
+
+   if State then
+capybaraCarCond = true
+	wait(0.2)
+	while capybaraCarCond==true do
+		local capybaraCarTab = {
+			"9835192311",
+			"9835192318",
+			"9835192328",
+			"9835192332",
+			"9835192342",
+			"9835192343",
+			"9835192356",
+			"9835192354",
+			"9835192340",
+			"9835192409",
+			"9835192407",
+		}
+
+		for _,v in pairs(capybaraCarTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if capybaraCarCond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    capybaraCarCond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+
+
+-------------
+
+local Toggle10 = Section3:CreateToggle("Rat Spinning", nil, function(State)
+	toggle = State
+
+   if State then
+spinningRatCond = true
+	wait(0.2)
+	while spinningRatCond == true do
+		local spinningRatTab = {
+			"9835143999",
+			"9835144007",
+			"9835144021",
+			"9835144008",
+			"9835144032",
+			"9835144027",
+			"9835144015",
+			"9835144038",
+			"9835144026",
+			"9835144019",
+			"9835144033",
+			"9835144035",
+			"9835144036",
+			"9835144031",
+			"9835144061",
+			"9835144037",
+
+		}
+		for _,v in pairs(spinningRatTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if spinningRatCond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    spinningRatCond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+
+
+-------------
+
+local Toggle11 = Section3:CreateToggle("Cat Dancing", nil, function(State)
+	toggle = State
+
+   if State then
+    happyCatCond = true
+	wait(0.1)
+	while happyCatCond==true do
+		local happyCatTab = {
+			"9835002079",
+			"9835002136",
+			"9835002131",
+			"9835002084",
+			"9835002080",
+			"9835002086",
+			"9835002078",
+			"9835002086",
+			"9835002115",
+			"9835002120",
+			"9835002096",
+			"9835002129",
+			"9835002100",
+			"9835002112",
+			"9835002098",
+
+		}
+		for _,v in pairs(happyCatTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if happyCatCond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    happyCatCond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+    game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+
+
+-------------
+
+local Toggle12 = Section3:CreateToggle("Yipeee", nil, function(State)
+	toggle = State
+
+   if State then
+        yipeeCond = true
+       while yipeeCond==true do
+		local yipeeTab = {
+			"9834224327",
+			"9834224367",
+			"9834224378",
+			"9834224390",
+			"9834224358",
+			"9834224395",
+			"9834224420",
+			"9834224394",
+			"9834224333",
+			"9834224348",
+			"9834224386",
+			"9834224368",
+			"9834224407",
+
+		}
+		for _,v in pairs(yipeeTab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if yipeeCond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    yipeeCond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+    end
+end)
+
+
+
+
+local Toggle18 = Section3:CreateToggle("Spongebob fish", nil, function(State)
+	toggle = State
+        if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"9888816960",
+			"9888816536",
+			"9888816224",
+			"9888810253",
+			"9888810067",
+			"9888809922",
+			"9888809764",
+			"9888809324",
+			"9888803341",
+			"9888802915",
+			"9888802721",
+			"9888802431",
+			"9888795511",
+			"9888795328",
+		}
+		for _,v in pairs(Tab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if Cond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    Cond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+end
+end)
+
+
+
+
+
+----- SIGNS
+
+
+
+
+local Toggle15 = Section4:CreateToggle("Skeleton Running", nil, function(State)
+	toggle = State
+   if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"9888761068",
+			"9888760854",
+			"9888754640",
+			"9888754491",
+			"9888754373",
+			"9888754246",
+			"9888754109",
+			"9888753970",
+			"9888753820",
+		}
+		for _,v in pairs(Tab) do
+			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
+			if Cond==false then
+				break
+			end
+			task.wait(.1)
+		end
+	end
+    else
+        Cond = false
+		task.wait(.1)
+		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
+    end
+end)
+
+
+local Toggle1255 = Section4:CreateToggle("Andrew tate Bottom G", nil, function(State)
+	toggle = State
+   if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"18189726393", -- 17
+			"18189727782",
+			"18189730607",
+			"18189732709", -- 21
+            "18189734203",
+            "18189745351", --24
+            "18189746310",
+            "18189746310",
+            "18189748932",
+            "18189750467",
+            "18189750467",
+            "18189752231", --29
+            "18189753355",
+            "18189755414",
+            "18189756571",
+            "18189758282",--33
+            "18189759386",
+            "18189760865",
+            "18189763458",--36
+            "18189764539",
+            "18189765673",
+            "18189767070",
+            "18189768306",
+            "18189769892", --41
+            "18189771708",
+            "18189772990",
+            "18189774784",
+            "18189776397",
+            "18189777829",
+            "18189779115",
+            "18189780333",
+            "18189782085",
+            "18189785077", -- 50
+            "18189787454",
+            "18189786251",
+            "18189795259",
+            "18189792333",
+		}
+		for _,v in pairs(Tab) do
+			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
+			if Cond==false then
+				break
+			end
+			task.wait(.1)
+		end
+	end
+    else
+        Cond = false
+		task.wait(.1)
+		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
+    end
+end)
+
+local Toggle17 = Section4:CreateToggle("Happy monkey circle", nil, function(State)
+	toggle = State
+        if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"9888794477",
+			"9888788087",
+			"9888787850",
+			"9888787557",
+			"9888787334",
+			"9888787028",
+			"9888786790",
+			"9888786611",
+			"9888786410",
+		}
+		for _,v in pairs(Tab) do
+			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
+			if Cond==false then
+				break
+			end
+			task.wait(.1)
+		end
+	end
+    else
+        Cond = false
+		task.wait(.1)
+		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
+    end
+end)
+
+
+
+local Toggle16 = Section4:CreateToggle("Rock rising his eyebrow", nil, function(State)
+	toggle = State
+        if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"9888770515",
+			"9888770296",
+			"9888769916",
+			"9888769634",
+			"9888769284",
+			"9888769008",
+			"9888768794",
+			"9888768523",
+			"9888763095",
+			"9888762892",
+			"9888762699",
+			"9888762367",
+			"9888762114",
+			"9888761941",
+			"9888761689",
+			"9888761246",
+		}
+		for _,v in pairs(Tab) do
+			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
+			if Cond==false then
+				break
+			end
+			task.wait(.1)
+		end
+	end
+    else
+        Cond = false
+		task.wait(.1)
+		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
+    end
+end)
+
+
+--done
+local Toggle5357474747 = Section4:CreateToggle("Spongebob fish", nil, function(State)
+	toggle = State
+        if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"9888816960",
+			"9888816536",
+			"9888816224",
+			"9888810253",
+			"9888810067",
+			"9888809922",
+			"9888809764",
+			"9888809324",
+			"9888803341",
+			"9888802915",
+			"9888802721",
+			"9888802431",
+			"9888795511",
+			"9888795328",
+		}
+		for _,v in pairs(Tab) do
+			game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','rbxassetid://'..tostring(v))
+			if Cond==false then
+				break
+			end
+			task.wait(.1)
+		end
+	end
+    else
+        Cond = false
+		task.wait(.1)
+		game:GetService("ReplicatedStorage").UpdateSign:FireServer('Decal','')
+    end
+end)
+
+
+
+-- sign to booth
+
+local Toggle315 = Section3:CreateToggle("Skeleton Running", nil, function(State)
+	toggle = State
+   if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"9888761068",
+			"9888760854",
+			"9888754640",
+			"9888754491",
+			"9888754373",
+			"9888754246",
+			"9888754109",
+			"9888753970",
+			"9888753820",
+		}
+		for _,v in pairs(Tab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if Cond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    Cond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+end
+end)
+
+
+local Toggle13255 = Section3:CreateToggle("Andrew tate Bottom G", nil, function(State)
+	toggle = State
+   if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"18189726393", -- 17
+			"18189727782",
+			"18189730607",
+			"18189732709", -- 21
+            "18189734203",
+            "18189745351", --24
+            "18189746310",
+            "18189746310",
+            "18189748932",
+            "18189750467",
+            "18189750467",
+            "18189752231", --29
+            "18189753355",
+            "18189755414",
+            "18189756571",
+            "18189758282",--33
+            "18189759386",
+            "18189760865",
+            "18189763458",--36
+            "18189764539",
+            "18189765673",
+            "18189767070",
+            "18189768306",
+            "18189769892", --41
+            "18189771708",
+            "18189772990",
+            "18189774784",
+            "18189776397",
+            "18189777829",
+            "18189779115",
+            "18189780333",
+            "18189782085",
+            "18189785077", -- 50
+            "18189787454",
+            "18189786251",
+            "18189795259",
+            "18189792333",
+		}
+		for _,v in pairs(Tab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if Cond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    Cond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+end
+end)
+
+
+local Toggle117 = Section3:CreateToggle("Happy monkey circle", nil, function(State)
+	toggle = State
+        if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"9888794477",
+			"9888788087",
+			"9888787850",
+			"9888787557",
+			"9888787334",
+			"9888787028",
+			"9888786790",
+			"9888786611",
+			"9888786410",
+		}
+		for _,v in pairs(Tab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if Cond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    Cond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+end
+end)
+
+
+
+
+local Toggle316 = Section3:CreateToggle("Rock rising his eyebrow", nil, function(State)
+	toggle = State
+        if State then
+        	Cond = true
+	task.wait(.1)
+	while Cond==true do
+		local Tab = {
+			"9888770515",
+			"9888770296",
+			"9888769916",
+			"9888769634",
+			"9888769284",
+			"9888769008",
+			"9888768794",
+			"9888768523",
+			"9888763095",
+			"9888762892",
+			"9888762699",
+			"9888762367",
+			"9888762114",
+			"9888761941",
+			"9888761689",
+			"9888761246",
+		}
+		for _,v in pairs(Tab) do
+			local k={[1]="Update",[2]={["DescriptionText"]="",["ImageId"]=v}}
+			game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(k))
+			if Cond==false then
+				break
+			end
+			wait(.1)
+		end
+	end
+    else
+    wait(2)
+    Cond = false
+        local args = {
+    [1] = "Update",
+    [2] = {
+        ["DescriptionText"] = "",
+        ["ImageId"] = 13976194703,
+    },
+}
+
+game:GetService("ReplicatedStorage").CustomiseBooth:FireServer(unpack(args))
+end
+end)
+
+local TextBox1 = Section3:CreateTextBox("Text Wrap", "Enter text", false, function(Value)
+    local s = Value.." "
+
+local updater = game:GetService("ReplicatedStorage").CustomiseBooth
+local function update(text)
+    local args = {
+        [1] = "Update",
+        [2] = {
+            ["DescriptionText"] = text.." ",
+            ["ImageId"] = 0
+        }
+    }
+    
+    updater:FireServer(unpack(args))
+end
+
+local ls = ""
+for i=1, #s, 1 do
+    local m = i % #s
+    ls = ls .. s:sub(m, m)
+    if i > 50 then
+        ls = ls:sub(2)
+    end
+    coroutine.wrap(update)(ls)
+    task.wait(.1)
+end
+end)
+TextBox1:AddToolTip("Does NOT work with booth animations on!")
