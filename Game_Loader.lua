@@ -14,6 +14,6 @@ elseif game.PlaceId == games.fyweather then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/Flex%20Your%20Weather.lua"))()
 elseif game.PlaceId == games.kat then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/knifeabilitytest.lua"))()
-elseif game.PlaceId == games.mort then
+--elseif game.PlaceId == games.mort then
  --   loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/Clearware/main/Clearware%20Games/mortem.lua"))()
 end
